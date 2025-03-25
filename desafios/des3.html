@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            padding-top: 30px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: auto;
+    
+        }
+        
+        th, td{
+            padding: 10px;
+            border: 1px solid #000000;
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Área</th>
+                <th>Disciplinas</th>
+                <th colspan="2">Notas</th>
+                <th>Média</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="3">Exatas</th>
+                <td>Matemática</td>
+                <td>8.5</td>
+                <td>9.0</td>    
+                <td>8.75</td>
+            </tr>
+            <tr>
+                <td>Física</td>
+                <td>7.0</td>
+                <td>8.0</td>
+                <td id="som">7.5</td>
+            </tr>
+            <tr>    
+                <td>Química</td>
+                <td>6.5</td>
+                <td>7.0</td>
+                <td>6.75</td>
+            </tr>
+            <th colspan="4">Média de Exatas</th>
+            <td>
+                <script>
+                    let mediaExatas = (8.75 + 7.5 + 6.75) / 3;
+                    document.write(mediaExatas.toFixed(2));
+                </script>
+            </td>
+
+        </tbody>
+    </table>
+    
+</body>
+</html>
