@@ -7,21 +7,33 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
         }
 
         table {
             border: 1px solid #000;
             width: 400px;
             border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
+            border-radius: 5px;
+            position: relative;
         }
-
-        th {
+        
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
             background-color: #f2f2f2;
         }
 
         td,th {
             border: 1px solid #000;
             padding: 5px;
+        }
+        tbody > tr:nth-child(odd) {
+            background-color: #f2f2f2;
         }
         .num {
             background-color: rgb(221, 220, 220);
@@ -38,20 +50,27 @@
     <!--
         Anatomia para tabelas grandes
         Table
+            Caption	'opcional' 'título da tabela' 'legenda'
             Thead
                 tr, td , th
             Tbody
                 tr, td, th
             Tfoot
                 tr, td, th
+
+                td = dados 
+                th = cabeçalho 'titulo da coluna'
     -->
     <table>
+        <caption>
+            Dados dos usuários
+        </caption>
         <thead>
             <tr>
-                <th>Nome</th>
-                <th>Idade</th>
-                <th>Sexo</th>
-                <th>Cidade</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Idade</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Cidade</th>
             </tr>
         </thead>
         <tbody>
@@ -79,12 +98,167 @@
                 <td>Feminino</td>
                 <td>Salvador</td>
             </tr>
-        </tbody>
+            <tr>
+                <td class="nom">Pedro</td>
+                <td class="num">40</td>
+                <td>Masculino</td>
+                <td>Fortaleza</td>
+            </tr>
+            <tr>
+                <td class="nom">Ana</td>
+                <td class="num">22</td>
+                <td>Feminino</td>
+                <td>Manaus</td>
+            </tr>
+            <tr>
+                <td class="nom">Paulo</td>
+                <td class="num">35</td>
+                <td>Masculino</td>
+                <td>Recife</td>
+            </tr>
+            <tr>
+                <td class="nom">Marta</td>
+                <td class="num">19</td>
+                <td>Feminino</td>
+                <td>Belém</td>
+            </tr>
+            <tr>
+                <td class="nom">José</td>
+                <td class="num">28</td>
+                <td>Masculino</td>
+                <td>Porto Alegre</td>
+            </tr>
+            <tr>
+                <td class="nom">Fernanda</td>
+                <td class="num">23</td>
+                <td>Feminino</td>
+                <td>Florianópolis</td>
+            </tr>
+            <tr>
+                <td class="nom">Ricardo</td>
+                <td class="num">33</td>
+                <td>Masculino</td>
+                <td>Brasília</td>
+            </tr>
+            <tr>
+                <td class="nom">Carla</td>
+                <td class="num">21</td>
+                <td>Feminino</td>
+                <td>Porto Velho</td>
+            </tr>
+            <tr>
+                <td class="nom">Marcos</td>
+                <td class="num">27</td>
+                <td>Masculino</td>
+                <td>Boa Vista</td>
+            </tr>
+            <tr>
+                <td class="nom">Luciana</td>
+                <td class="num">24</td>
+                <td>Feminino</td>
+                <td>Palmas</td>
+            </tr>
+            <tr>
+                <td class="nom">Roberto</td>
+                <td class="num">32</td>
+                <td>Masculino</td>
+                <td>Macapá</td>
+            </tr>
+            <tr>
+                <td class="nom">Sandra</td>
+                <td class="num">18</td>
+                <td>Feminino</td>
+                <td>Porto Alegre</td>
+            </tr>
+            <tr>
+                <td class="nom">Gustavo</td>
+                <td class="num">29</td>
+                <td>Masculino</td>
+                <td>Recife</td>
+            </tr>
+            <tr>
+                <td class="nom">Larissa</td>
+                <td class="num">26</td>
+                <td>Feminino</td>
+                <td>Belém</td>
+            </tr>
+            <tr>    
+                <td class="nom">Eduardo</td>
+                <td class="num">31</td>
+                <td>Masculino</td>
+                <td>Brasília</td>
+            </tr>
+            <tr>
+                <td class="nom">Tatiana</td>
+                <td class="num">16</td>
+                <td>Feminino</td>
+                <td>Porto Velho</td>
+            </tr>
+            <tr>    
+                <td class="nom">Rafael</td>
+                <td class="num">34</td>
+                <td>Masculino</td>
+                <td>Boa Vista</td>
+            </tr>
+            <tr>    
+                <td class="nom">Patrícia</td>
+                <td class="num">22</td>
+                <td>Feminino</td>
+                <td>Palmas</td>
+            </tr>
+            <tr>
+                <td class="nom">Fábio</td>
+                <td class="num">30</td>
+                <td>Masculino</td>
+                <td>Macapá</td>
+            </tr>
+            <tr>    
+                <td class="nom">Camila</td>
+                <td class="num">19</td>
+                <td>Feminino</td>
+                <td>Porto Alegre</td>
+            </tr>
+            <tr>
+                <td class="nom">Márcio</td>
+                <td class="num">28</td>
+                <td>Masculino</td>
+                <td>Recife</td>
+            </tr>
+            <tr>    
+                <td class="nom">Lúcia</td>
+                <td class="num">25</td>
+                <td>Feminino</td>
+                <td>Belém</td>
+            </tr>
+            <tr>    
+                <td class="nom">Ronaldo</td>
+                <td class="num">33</td>
+                <td>Masculino</td>
+                <td>Brasília</td>
+            </tr>
+        </tbody>        
         <tfoot>
-        <th>Total de pessoas</th>
-        <td class="num">0004</td>
+        <th scope="row">Total de pessoas</th>
+        <td class="num" colspan="3">0019</td>
         </tfoot>
     </table>
+    Primeira pagina <a href="index.html">index</a>
+    <br>
+    Terceira pagina <a href="index3.html">Index</a>
+    
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ipsa nobis praesentium doloremque perferendis ex, magnam amet fuga sint reprehenderit porro debitis maxime, dolore dolorum. Similique, repudiandae! Iusto, iure optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi molestias quidem, eius ipsum animi quisquam consequuntur soluta dolorum aperiam deleniti, at quae provident voluptatum ratione cupiditate sed quas ad vero! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam nemo commodi minima quibusdam. Similique, et? Deleniti praesentium tempora magni blanditiis quos a aliquam, quod, doloribus veritatis culpa odio numquam architecto. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus eos ullam magnam autem? Necessitatibus vitae culpa dolorem neque vel, veritatis aliquid fugit molestias numquam minus velit reiciendis, impedit iste magnam.</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ipsa nobis praesentium doloremque perferendis ex, magnam amet fuga sint reprehenderit porro debitis maxime, dolore dolorum. Similique, repudiandae! Iusto, iure optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi molestias quidem, eius ipsum animi quisquam consequuntur soluta dolorum aperiam deleniti, at quae provident voluptatum ratione cupiditate sed quas ad vero! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam nemo commodi minima quibusdam. Similique, et? Deleniti praesentium tempora magni blanditiis quos a aliquam, quod, doloribus veritatis culpa odio numquam architecto. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus eos ullam magnam autem? Necessitatibus vitae culpa dolorem neque vel, veritatis aliquid fugit molestias numquam minus velit reiciendis, impedit iste magnam.</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ipsa nobis praesentium doloremque perferendis ex, magnam amet fuga sint reprehenderit porro debitis maxime, dolore dolorum. Similique, repudiandae! Iusto, iure optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi molestias quidem, eius ipsum animi quisquam consequuntur soluta dolorum aperiam deleniti, at quae provident voluptatum ratione cupiditate sed quas ad vero! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam nemo commodi minima quibusdam. Similique, et? Deleniti praesentium tempora magni blanditiis quos a aliquam, quod, doloribus veritatis culpa odio numquam architecto. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus eos ullam magnam autem? Necessitatibus vitae culpa dolorem neque vel, veritatis aliquid fugit molestias numquam minus velit reiciendis, impedit iste magnam.</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ipsa nobis praesentium doloremque perferendis ex, magnam amet fuga sint reprehenderit porro debitis maxime, dolore dolorum. Similique, repudiandae! Iusto, iure optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi molestias quidem, eius ipsum animi quisquam consequuntur soluta dolorum aperiam deleniti, at quae provident voluptatum ratione cupiditate sed quas ad vero! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam nemo commodi minima quibusdam. Similique, et? Deleniti praesentium tempora magni blanditiis quos a aliquam, quod, doloribus veritatis culpa odio numquam architecto. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus eos ullam magnam autem? Necessitatibus vitae culpa dolorem neque vel, veritatis aliquid fugit molestias numquam minus velit reiciendis, impedit iste magnam.</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ipsa nobis praesentium doloremque perferendis ex, magnam amet fuga sint reprehenderit porro debitis maxime, dolore dolorum. Similique, repudiandae! Iusto, iure optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi molestias quidem, eius ipsum animi quisquam consequuntur soluta dolorum aperiam deleniti, at quae provident voluptatum ratione cupiditate sed quas ad vero! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam nemo commodi minima quibusdam. Similique, et? Deleniti praesentium tempora magni blanditiis quos a aliquam, quod, doloribus veritatis culpa odio numquam architecto. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus eos ullam magnam autem? Necessitatibus vitae culpa dolorem neque vel, veritatis aliquid fugit molestias numquam minus velit reiciendis, impedit iste magnam.</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ipsa nobis praesentium doloremque perferendis ex, magnam amet fuga sint reprehenderit porro debitis maxime, dolore dolorum. Similique, repudiandae! Iusto, iure optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi molestias quidem, eius ipsum animi quisquam consequuntur soluta dolorum aperiam deleniti, at quae provident voluptatum ratione cupiditate sed quas ad vero! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam nemo commodi minima quibusdam. Similique, et? Deleniti praesentium tempora magni blanditiis quos a aliquam, quod, doloribus veritatis culpa odio numquam architecto. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus eos ullam magnam autem? Necessitatibus vitae culpa dolorem neque vel, veritatis aliquid fugit molestias numquam minus velit reiciendis, impedit iste magnam.</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ipsa nobis praesentium doloremque perferendis ex, magnam amet fuga sint reprehenderit porro debitis maxime, dolore dolorum. Similique, repudiandae! Iusto, iure optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi molestias quidem, eius ipsum animi quisquam consequuntur soluta dolorum aperiam deleniti, at quae provident voluptatum ratione cupiditate sed quas ad vero! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam nemo commodi minima quibusdam. Similique, et? Deleniti praesentium tempora magni blanditiis quos a aliquam, quod, doloribus veritatis culpa odio numquam architecto. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus eos ullam magnam autem? Necessitatibus vitae culpa dolorem neque vel, veritatis aliquid fugit molestias numquam minus velit reiciendis, impedit iste magnam.</p>
     
 </body>
 </html>
