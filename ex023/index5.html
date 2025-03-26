@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            width: 400px;
+            height: 400px;
+        }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 6px;
+        }
+        
+        td, th{
+            border: 1px solid #000;
+            padding: 5px;
+        }
+
+        col.cnome {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+            <col class="cnome">
+            <col class="cidade">
+            <col class="csexo">
+        </colgroup>
+        <caption>Cadastro</caption>
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Idade</th>
+                <th scope="col">Sexo</th>
+            </tr>
+        </thead> 
+        <tr>
+            <td>João</td>
+            <td>25</td>
+            <td>Masculino</td>
+        </tr>
+        <tr class="gray">
+            <td>Maria</td>
+            <td>20</td>
+            <td>Feminino</td>
+        </tr>
+        <tr>
+            <td>Carlos</td>
+            <td>30</td>
+            <td>Masculino</td>
+        </tr>
+        <tr class="alert">
+            <td>Julia</td>
+            <td>17</td>
+            <td>Feminino</td>
+        </tr>
+        <tr>
+            <td>Lucas</td>
+            <td>22</td>
+            <td>Masculino</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
