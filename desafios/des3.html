@@ -7,10 +7,11 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
             padding-top: 30px;
+            font-weight: bold;
         }
 
         table {
@@ -18,11 +19,48 @@
             margin: auto;
     
         }
-        
-        th, td{
+        thead {
+            background-color: gray;
+            color: white;
             padding: 10px;
-            border: 1px solid #000000;
+            font-size: 20px;
+            width: 100%;
+            height: 100px;
+        }
+        
+        th{
+            padding: 10px;
+            border: 2px solid #000000;
             width: 20%;
+            color: white;
+            background-color: gray;
+        } 
+
+        .info {
+            background-color: white;
+            color: black;
+            font-size: 20px;
+        }
+
+        td{
+            padding: 10px;
+            border: 2px solid #000000;
+            width: 20%;
+            text-align: center;
+        }
+
+        .final {
+            text-align: right;
+            background-color: gray;
+            color: white;
+        }
+
+        .fin {
+            text-align: right;
+        }
+
+        .materia {
+            text-align: left;
         }
     </style>
 </head>
@@ -30,40 +68,46 @@
     <table>
         <thead>
             <tr>
-                <th>Área</th>
-                <th>Disciplinas</th>
-                <th colspan="2">Notas</th>
-                <th>Média</th>
+                <th scope="col">Área</th>
+                <th scope="col">Disciplinas</th>
+                <th colspan="2" scope="col">Notas</th>
+                <th scope="col">Médias</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th rowspan="3">Exatas</th>
-                <td>Matemática</td>
+                <th rowspan="3" class="info">Exatas</th>
+                <td class="materia">Matemática</td>
                 <td>8.5</td>
                 <td>9.0</td>    
-                <td>8.75</td>
+                <td class="fin">8.75</td>
             </tr>
             <tr>
-                <td>Física</td>
+                <td class="materia">Física</td>
                 <td>7.0</td>
                 <td>8.0</td>
-                <td id="som">7.5</td>
+                <td class="fin">7.5</td>
             </tr>
             <tr>    
-                <td>Química</td>
+                <td class="materia">Química</td>
                 <td>6.5</td>
                 <td>7.0</td>
-                <td>6.75</td>
+                <td class="fin">6.75</td>
             </tr>
-            <th colspan="4">Média de Exatas</th>
-            <td>
-                <script>
-                    let mediaExatas = (8.75 + 7.5 + 6.75) / 3;
-                    document.write(mediaExatas.toFixed(2));
-                </script>
-            </td>
-
+            <th colspan="4" >Média de Exatas</th>
+            <td class="final">0.00</td>
+            <tr>
+                <th rowspan="2" class="info">Humanas</th>
+                <td class="materia">História</td>
+                <td>8.0</td>
+                <td>7.5</td>
+                <td class="fin">7.75</td>
+            </tr>
+            <tr>
+                <td class="materia">Geografia</td>
+                <td>9.0</td>
+                <td>8.5</td>
+                <td class="fin">8.75</td>
         </tbody>
     </table>
     
