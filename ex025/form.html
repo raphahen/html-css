@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulário</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+    }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <!-- name - ultil para PHP e HTML
+    id - ultil para HTML, não é necessário no PHP. O id é um atributo que identifica de forma única um elemento dentro do documento HTML. É útil para aplicar estilos CSS ou manipular o elemento com JavaScript. -->
+    <!--
+    <label - ultil para HTML, não é necessário no PHP. O label é um elemento que associa um texto a um campo de formulário. Quando o usuário clica no texto do label, o campo de entrada associado recebe o foco. Isso melhora a acessibilidade e a usabilidade do formulário. O atributo "for" do label deve corresponder ao atributo "id" do campo de entrada correspondente.  -->
+
+    <!--     <label for="Nome">Nome:</label>  --> <!-- O atributo "for" do label deve corresponder ao atributo "id" do campo de entrada correspondente.  -->
+        
+<!--     <input - ultil para HTML e PHP. O input é um elemento de formulário que permite ao usuário inserir dados. O tipo de entrada (type) determina o tipo de dado que o campo aceita, como texto, senha, número, etc. O atributo "name" é usado para identificar o campo quando os dados do formulário são enviados para o servidor.  -->    
+    
+
+    <form action="cadastro.php" method="post">  
+        <!-- autocomplete="off"
+            method="post" - ultil para PHP. O método POST é um dos métodos HTTP usados para enviar dados do cliente para o servidor. Ao usar o método POST, os dados do formulário são enviados no corpo da solicitação HTTP, em vez de na URL. Isso permite enviar grandes quantidades de dados e informações sensíveis, como senhas, sem expô-las na URL.  -->
+            
+            <!-- O método GET é um dos métodos HTTP usados para enviar dados do cliente para o servidor. Ao usar o método GET, os dados do formulário são anexados à URL como parâmetros de consulta. Isso é útil para solicitações simples e quando os dados não são sensíveis, mas tem limitações de tamanho e segurança.  -->
+        <p><label for="inome">Nome:</label>
+        <input type="text" name="Nome" id="inome"></p>
+
+
+        <p><label for="isobrenome">Sobrenome:</label> 
+        <input type="text" name="sobrenome" id="isobrenome"></p>
+
+
+        <p><input type="submit" value="Cadastro"></p>
+    </form>
+
+    
+</body>
+</html>
