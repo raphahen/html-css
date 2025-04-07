@@ -12,15 +12,19 @@
         <p><label for="inome">Nome:</label>
         <input type="text" name="Nome" id="inome"></p>
 
-        <p><label for="isobrenome">Sobrenome:</label> 
-        <input type="text" name="sobrenome" id="isobrenome"></p>
-
-        <p><label for="isen">Senha: </label>
-        <input type="password" name="sen" id="isen" required autocomplete="off" placeholder="Digite sua senha" minlength="8">
+        <p>
+            <label for="media">Média</label>
+            <input type="number" name="inum" id="inum" min="0" max="10" step="0.1" required placeholder="Digite sua média">
         </p>
 
+        <p>
+            <label for="imes">Periodo letivo</label>
+            <input type="month" name="imes" id="imes" required placeholder="Digite o mês e ano" value="2023-10">
+        </p>
+        
 
-        <p><input type="submit" value="Cadastro"></p>
+
+        <input type="submit" value="Cadastro">
         <input type="reset" value="Limpar">
 
     </form>
